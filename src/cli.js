@@ -1,9 +1,9 @@
-import readlineSync from 'readline-sync';
+import readlineSync from "readline-sync";
 
-const qwerty = () => {
-    const name = readlineSync.question('Your answer: ');
-    return `Hello, ${name}!`
-}
-console.log(qwerty());
 
-export default qwerty
+const getUserName = () => {
+    const name = readlineSync.question("May I have your name?: ");
+    return name;
+};
+
+export { getUserName };

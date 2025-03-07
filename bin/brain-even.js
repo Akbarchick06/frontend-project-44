@@ -1,0 +1,39 @@
+import readlineSync from "readline-sync";
+
+
+const gameRandomNumber = (userName) => {
+    console.log('Answer "Yes" if the number is even, otherwise answer "No"');
+    let i = 0;
+    while (i < 3 ) {
+        const randomNumber = Math.floor(Math.random() * 6) + 1;
+        console.log(`Question: ${randomNumber}`);
+        const userInput = readlineSync.question('"Yes" or "No"? :');
+        
+        if (userInput === "Yes") {
+            if (randomNumber % 2 === 0) {
+                console.log('Correct!');
+                i++;
+            } else {
+                return `'No' is wrong answer ;(. Correct answer was 'Yes'.\nLet's try again, ${ userName }`;
+            }       
+        } else if (userInput === "No") {
+            if (randomNumber % 2 !== 0) {
+                console.log("Correct!")
+                i++;
+            } else {
+               return `'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${ userName }.`;
+            }
+        } else {
+            return "No correct"
+        }
+        if (i === 3) {
+            return (`Congratulations, ${ userName }!`);
+        }
+    }
+
+    console.log(gameRandomNumber());
+}
+export default gameRandomNumber
+
+
+

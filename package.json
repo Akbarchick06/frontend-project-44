@@ -11,7 +11,8 @@
   "license": "ISC",
   "bin": {
     "code": "bin/brain-games.js",
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "http-server": "^14.1.1",
@@ -19,6 +20,11 @@
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-vue": "^10.0.0",
+    "globals": "^16.0.0",
     "jest": "^29.7.0"
   }
 }
