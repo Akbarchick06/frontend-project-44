@@ -3,8 +3,8 @@ import readlineSync from "readline-sync";
 const getRandomOper = (userName) => {
   let i = 0;
   while (i < 3) {
-    const num1 = Math.floor(Math.random() * 10);  // Уменьшаем для удобства
-    const num2 = Math.floor(Math.random() * 10);  // Уменьшаем для удобства
+    const num1 = Math.floor(Math.random() * 10);  
+    const num2 = Math.floor(Math.random() * 10);  
     const operationsArray = ['+', '-', '*'];
     const randomOperationIndex = Math.floor(Math.random() * operationsArray.length);
     const selectedOperation = operationsArray[randomOperationIndex];
