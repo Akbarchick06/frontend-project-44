@@ -1,6 +1,7 @@
 import readlineSync from "readline-sync";
 
 const getRandomOper = (userName) => {
+  console.log("What is the result of the expression?")
   let i = 0;
   while (i < 3) {
     const num1 = Math.floor(Math.random() * 10);  

@@ -10,6 +10,7 @@ const gcd = (a, b) => {
 };
 
 const gameNOD = (userName) => {
+ 
     let i = 0;
     while (i < 3) {
         const num1 = Math.floor(Math.random() * 6) + 1;
