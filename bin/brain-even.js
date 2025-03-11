@@ -1,10 +1,12 @@
 import readlineSync from "readline-sync";
 
-
-const gameRandomNumber = (userName) => {
+console.log('Welcome to the Brain Games!')
+const gameRandomNumber = () => {
     console.log('Answer "Yes" if the number is even, otherwise answer "No"');
     let i = 0;
     while (i < 3 ) {
+        const userName = readlineSync.question("Your name: ")
+        console.log(`Hello, ${userName}`)
         const randomNumber = Math.floor(Math.random() * 6) + 1;
         console.log(`Question: ${randomNumber}`);
         const userInput = readlineSync.question('"Yes" or "No"? :');
@@ -31,8 +33,8 @@ const gameRandomNumber = (userName) => {
         }
     }
 
-    console.log(gameRandomNumber());
 }
+console.log(gameRandomNumber());
 export default gameRandomNumber
 
 

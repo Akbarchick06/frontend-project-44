@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+console.log('Welcome to the Brain Games!')
 const generateProgression = (start, step, length) => {
   const progression = [];
   for (let i = 0; i < length; i++) {
@@ -8,7 +9,9 @@ const generateProgression = (start, step, length) => {
   return progression;
 };
 
-const gameProgression = (userName) => {
+const gameProgression = () => {
+  const userName = readlineSync.question("Your name: ")
+  console.log(`Hello, ${userName}`)
   const roundsCount = 3;
 
   for (let i = 0; i < roundsCount; i++) {
@@ -41,5 +44,5 @@ const gameProgression = (userName) => {
 
   return `Congratulations, ${userName}!`;
 };
-
+console.log(gameProgression())
 export default gameProgression;

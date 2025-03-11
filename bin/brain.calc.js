@@ -1,6 +1,9 @@
 import readlineSync from "readline-sync";
 
-const getRandomOper = (userName) => {
+console.log('Welcome to the Brain Games!')
+const getRandomOper = () => {
+  const userName = readlineSync.question("Your name: ")
+    console.log(`Hello, ${userName}`)
   console.log("What is the result of the expression?")
   let i = 0;
   while (i < 3) {
@@ -32,6 +35,6 @@ const getRandomOper = (userName) => {
   return `Congratulations, ${userName}! You won!`;
 };
 
-
+console.log(getRandomOper())
 export default getRandomOper;
 

@@ -1,5 +1,6 @@
 import readlineSync from "readline-sync";
 
+console.log('Welcome to the Brain Games!')
 const isPrime = (num) => {
     if (num <= 1) return false;
     for (let i = 2; i <= Math.sqrt(num); i++) {
@@ -8,7 +9,9 @@ const isPrime = (num) => {
     return true;
 };
 
-const gamePrimeNumbers = (userName) => {
+const gamePrimeNumbers = () => {
+    const userName = readlineSync.question("Your name: ")
+      console.log(`Hello, ${userName}`)
     console.log('Answer "Yes" if the given number is prime. Otherwise, answer "No".');
     let i = 0;
     while (i < 3) {
@@ -26,5 +29,5 @@ const gamePrimeNumbers = (userName) => {
     }
     return `Congratulations, ${userName}!`;
 };
-
+console.log(gamePrimeNumbers())
 export default gamePrimeNumbers;

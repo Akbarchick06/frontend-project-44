@@ -1,5 +1,6 @@
 import readlineSync from "readline-sync";
 
+console.log('Welcome to the Brain Games!')
 const gcd = (a, b) => {
     while (b) {
         const temp = b;
@@ -9,8 +10,9 @@ const gcd = (a, b) => {
     return a;
 };
 
-const gameNOD = (userName) => {
- 
+const gameNOD = () => {
+    const userName = readlineSync.question("Your name: ")
+    console.log(`Hello, ${userName}`)
     let i = 0;
     while (i < 3) {
         const num1 = Math.floor(Math.random() * 6) + 1;
@@ -29,4 +31,5 @@ const gameNOD = (userName) => {
     if (i === 3)
     return `Congratulations, ${userName}!`;
 };
+console.log(gameNOD())
 export default gameNOD;        
